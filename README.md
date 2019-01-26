@@ -19,23 +19,28 @@ The project is part of the www.hikcal.com project.
 
 ## Progression
 ### Priority High
-* [ ] Scan Event Page to get Data
-* [ ] Import URL LIST From CSV
-* [ ] Export Data To File
+* [ ] Implement Async / Await
+* [ ] Return Correct Array to Phase 2
 #### Phase 2
-* [ ] Render Data 
-@Todo @Todo
-
-#### Priority Medium
-* [ ] Implement Cache System (For non interesting events)
+* [ ] Auto Open urls on new Tab | 1 hours
+#### Phase 3
+* [ ] Import URL LIST From CSV | Estimated 3 hours
 
 #### Priority Low
 * [ ] U.I For Extension
+* [ ] Implement Cache System (For non interesting events)
 
 ### Done
-* [x] Firefox Extension files
-* [x] Main Event Page Scrapping
-* [x] Main Event Page Subpages links Scrapping
-* [x] All Links Analysis
-* [x] Analysis Filtering on already Interrested Events
-* [x] Confirm Working Data
+* [x] Research & Test ~ 18 hours
+* [x] Firefox Extension files | 30 minutes
+* [x] Main Event Page Scrapping | 3 hours
+* [x] Main Event Page Subpages links Scrapping | 3 hours
+* [x] All Links Analysis | 2 hours
+* [x] Analysis Filtering on already Interrested Events | 30 minutes
+* [x] Confirm Working Data | 5 minutes / test
+
+### Postponed
+* [x] Re-work Stage functions | 8 hours ~ Unexpected -!- `Unresolved` -!-  
+
+## <Rescoping the project>
+- Sat 26 6:00 P.M 

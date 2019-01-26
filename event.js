@@ -5,36 +5,59 @@ document.body.style.border = "5px solid red";
 // @Todo Render Data 
 // @Todo Export Data To File
 // @Todo Scan Event Page to get Data
-// !@Todo Split This in pieces
-const parseFacebookEventsFromPages = (eventurls) => {
-    let ExtractedList = [];
-    eventurls.map(x => {
-    return fetch(x)
-    .then(content => content.text())
-    .then(html => {
-      const frag = document.createElement("div")
-      frag.innerHTML = html;
-      [...frag.querySelectorAll('table td > div')].map(
-          container => 
-          {
-            const elements = [...container.querySelectorAll('div > span')]
-            const urls = [...elements[4].querySelectorAll('a')];
-            if (urls[1])
-            {
+
+function openInNewTab(url, pageID) {
+    var myWin = window.open(url, pageID.toString());
+    myWin.onclick();
+}
+
+const parseFacebookEventsPage = (html, i) => {
+    const frag = document.createElement("div")
+    frag.innerHTML = html;
+    const eventList = [];
+    [...frag.querySelectorAll('table td > div')].map(
+        container => {
+            const elements = [...container.querySelectorAll('div > span')];
+
+            // ! Todo Split this so we can extra checks later
+            const isNotYetInterrested = [...elements[4].querySelectorAll('a')].find(
+                event => event.innerHTML.includes("Interested") // Can Add Extra Checks here
+            )
+
+            if (isNotYetInterrested) {
                 const date = elements[0].innerHTML;
                 const location = elements[2].innerHTML;
+                const urls = [...elements[4].querySelectorAll('a')];
+                // openInNewTab(urls[0].href);
+                
+
                 const links = {
-                            "View More details": urls[0].href, 
-                            "Interested": urls[1].href
-                            };
-                const obj = { date, location, links }
-                if (obj)
-                    ExtractedList.push(obj);
+                    "Details": urls[0].href, // !@TODO SCAN THIS LINK
+                    "Interested": urls[1].href
+                };
+                const obj = {
+                    date,
+                    location,
+                    links
+                }
+                eventList.push(obj);
             }
-      })
-       
-    })
-}); return ExtractedList
+        }
+    )
+
+    return eventList ? eventList : null;
+}
+
+// !@Todo Split This in pieces
+const getFacebookEventsUrls = (eventurls) => {
+    let ExtractedList = [];
+    Promise.all(eventurls.map((x, i) => {
+    return fetch(x)
+    .then(content => content.text())
+    .then(html => parseFacebookEventsPage(html, i)
+    )
+})).then(result => ExtractedList.push(result))
+    return ExtractedList;   
 }
 
 let parseFacebookEventPageForMore = html => {
@@ -70,8 +93,8 @@ const Promis = (urls) => Promise.all(
             setTimeout(function () {
                 return getAllSubUrls(url, [url])
                 .then(newList => {
-                    const listOfAllPossibleEvents = parseFacebookEventsFromPages(newList);
-                    console.log("Working Stage 1 - 2 - 3", listOfAllPossibleEvents);
+                    const listOfAllPossibleEvents = getFacebookEventsUrls(newList);
+                    console.log("Working Stage", listOfAllPossibleEvents);
                 })
             }, 500);
 }))
