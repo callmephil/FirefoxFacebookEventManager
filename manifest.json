@@ -9,7 +9,7 @@
 	"content_scripts": [
 		{
 			"matches": ["https://m.facebook.com/philippe.haddad.399"],
-			"js": ["event.js"]
+			"js": ["scrapper.js"]
 		}
 	]
 }

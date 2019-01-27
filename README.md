@@ -19,10 +19,10 @@ The project is part of the www.hikcal.com project.
 
 ## Progression
 ### Priority High
-* [ ] Implement Async / Await
-* [ ] Return Correct Array to Phase 2
+* [x] Implement Async / Await
+* [x] (Bug Fix) Return Correct Array to Phase 2
 #### Phase 2
-* [ ] Auto Open urls on new Tab | 1 hours
+* [x] Auto Open urls on new Tab | 1 hours
 #### Phase 3
 * [ ] Import URL LIST From CSV | Estimated 3 hours
 

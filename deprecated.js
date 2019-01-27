@@ -48,7 +48,6 @@ const parseFacebookEventsPage = (html, i) => {
     return eventList ? eventList : null;
 }
 
-// !@Todo Split This in pieces
 const getFacebookEventsUrls = (eventurls) => {
     let ExtractedList = [];
     Promise.all(eventurls.map((x, i) => {
