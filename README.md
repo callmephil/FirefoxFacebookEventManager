@@ -26,6 +26,12 @@ The project is part of the www.hikcal.com project.
 #### Phase 3
 * [ ] Import URL LIST From CSV | Estimated 3 hours
 
+#### Priority Medium
+* [ ] Add Timer between requests
+* [ ] Calculate Timer between requests
+* [ ] Remove Tabs limit Restriction
+* [ ] Implement Try/Catch debugging
+
 #### Priority Low
 * [ ] U.I For Extension
 * [ ] Implement Cache System (For non interesting events)
