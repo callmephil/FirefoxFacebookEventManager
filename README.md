@@ -27,7 +27,7 @@ The project is part of the www.hikcal.com project.
 * [ ] Import URL LIST From CSV | Estimated 3 hours
 
 #### Priority Medium
-* [ ] Add Timer between requests
+* [x] Add Timer between requests | 4 hours
 * [ ] Calculate Timer between requests
 * [ ] Remove Tabs limit Restriction
 * [ ] Implement Try/Catch debugging
@@ -37,7 +37,7 @@ The project is part of the www.hikcal.com project.
 * [ ] Implement Cache System (For non interesting events)
 
 ### Done
-* [x] Research & Test ~ 18 hours
+* [x] Research & Test ~ 21 hours
 * [x] Firefox Extension files | 30 minutes
 * [x] Main Event Page Scrapping | 3 hours
 * [x] Main Event Page Subpages links Scrapping | 3 hours
