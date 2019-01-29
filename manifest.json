@@ -6,10 +6,14 @@
 	"icons": {
 		"48":"icon.png"
 	},
+	"permissions": [
+		"storage",
+		"*://localhost/*"
+	],
 	"content_scripts": [
 		{
-			"matches": ["https://m.facebook.com/philippe.haddad.399"],
-			"js": ["scrapper.js"]
+			"matches": ["https://m.facebook.com/"],
+			"js": ["style.js", "scrapper.js"]
 		}
 	]
 }
