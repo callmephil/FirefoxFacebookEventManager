@@ -64,22 +64,24 @@ The project is part of the www.hikcal.com project.
 
 > Real Time Spent 1 Day
 
-### Test Result 
+### Test Result :
 #### // V.0.5
-URL Count : 1071
-URL Result Count : 87 => `Crash`
-Time : 7 minutes
-Interval : 300 ms
-ErrorLog : No
+- URL Count : 1071
+- URL Result Count : 87 => `Crash`
+- Time : 7 minutes
+- Interval : 300 ms
+- ErrorLog : No
 #### // V.1.0
-URL Count : 1071
-URL Result Count : 3571 => `Success`
-Time : 30 Minutes
-Interval : 300 ms
-ErrorLog : Yes | `149`
+- URL Count : 1071
+- URL Result Count : 3571 => `Success`
+- Time : 30 Minutes
+- Interval : 300 ms
+- ErrorLog : Yes | `149`
 > Note : Re-running the test gives different result
 
-#### <Rescoping the project>
+
+#### Rescoping the project
 - Sat 26 6:00 P.M 
-#### <Re-Work Algorithm From Scratch>
+
+#### Re-Work Algorithm From Scratch
 - 1/2/2019 12:00 A.M > Commit Time.
