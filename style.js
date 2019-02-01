@@ -1,4 +1,4 @@
-document.body.style.border = "5px solid red";
+document.body.style.border = "2px solid black";
 var elem = document.getElementById('root');
 elem.parentNode.removeChild(elem);
 

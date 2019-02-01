@@ -18,25 +18,21 @@ The project is part of the www.hikcal.com project.
 [Tutorial in Video here](https://youtu.be/8YndtIYHMqU?t=212 "Tutorial in Video (Youtube)")
 
 ## Progression
-### Priority High
-* [x] Implement Async / Await
-* [x] (Bug Fix) Return Correct Array to Phase 2
-#### Phase 2
-* [x] Auto Open urls on new Tab | 1 hours
-#### Phase 3
-* [ ] Import URL LIST From CSV | Estimated 3 hours
+### Priority High V.1.0
+* [ ] Solve the `T` mystery `!!!`
+* [ ] Re-Work HTML parsing process + (Understand why some  are skipped)
+* [ ] Solve bugs listed in ErrorsLog
+* [ ] Import URL LIST from external File | Estimated 3 hours
 
 #### Priority Medium
-* [x] Add Timer between requests | 4 hours
-* [ ] Calculate Timer between requests
-* [ ] Remove Tabs limit Restriction
-* [ ] Implement Try/Catch debugging
+* [ ] U.I For Extension
+* [ ] Add Filtering Options
 
 #### Priority Low
-* [ ] U.I For Extension
-* [ ] Implement Cache System (For non interesting events)
+* [ ] Implement Shortcut [Interrested, UnInterrested]
+* [ ] Implement Cache System (For non interesting events) | `Note: Urls changes store title text instead`
 
-### Done
+### Completed Task // V.0.5 | Deprecated
 * [x] Research & Test ~ 21 hours
 * [x] Firefox Extension files | 30 minutes
 * [x] Main Event Page Scrapping | 3 hours
@@ -44,9 +40,46 @@ The project is part of the www.hikcal.com project.
 * [x] All Links Analysis | 2 hours
 * [x] Analysis Filtering on already Interrested Events | 30 minutes
 * [x] Confirm Working Data | 5 minutes / test
-
-### Postponed
+* [x] Implement Async / Await
+* [x] (Bug Fix) Return Correct Array to Phase 2
+* [x] Auto Open urls on new Tab | 1 hours
 * [x] Re-work Stage functions | 8 hours ~ Unexpected -!- `Unresolved` -!-  
 
-## <Rescoping the project>
+> Real Time Spent 5 Days
+
+### Completed Task // V.1.0
+> Fully Re-thinked the Process
+* [x] Convert Old Urls to mobile format
+* [x] Add New Urls | Remove duplicates 
+* [x] Fetch URL once per page || Optimization 
+* [x] Handle Promise Correctly || Optimization
+* [x] Implement Try/Catch debugging
+* [x] Implement ErrorLogs 
+* [x] Implement Timer
+* [x] Calculate Timer Between requests
+* [x] Implement Timer configuration
+* [x] Remove Tabs limit Restriction
+* [x] Implement Small Config + Removed Magic numbers
+    > Interval | Logs | SubUrls
+
+> Real Time Spent 1 Day
+
+### Test Result 
+#### // V.0.5
+URL Count : 1071
+URL Result Count : 87 => `Crash`
+Time : 7 minutes
+Interval : 300 ms
+ErrorLog : No
+#### // V.1.0
+URL Count : 1071
+URL Result Count : 3571 => `Success`
+Time : 30 Minutes
+Interval : 300 ms
+ErrorLog : Yes | `149`
+> Note : Re-running the test gives different result
+
+#### <Rescoping the project>
 - Sat 26 6:00 P.M 
+#### <Re-Work Algorithm From Scratch>
+- 1/2/2019 12:00 A.M > Commit Time.
