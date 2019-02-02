@@ -53,7 +53,7 @@ const main = async (urls) => {
                     });
                 }
                 btn_groups.onclick = OpenGroupPages;
-                btn_groups.innerHTML = `${_Group_Pages_Url.length} Urls Ready to open. Click me !`;
+                btn_groups.innerHTML = `${_Group_Pages_Url.length} Group Urls Ready to open. Click me !`;
 
                 const OpenUnresolvedUrls = () => {
                     _Unresolved_Url.forEach(element => {
@@ -61,7 +61,7 @@ const main = async (urls) => {
                     });
                 }
                 btn_logs.onclick = OpenUnresolvedUrls;
-                btn_logs.innerHTML = `${_Unresolved_Url.length} Urls Ready to open. Click me !`;
+                btn_logs.innerHTML = `${_Unresolved_Url.length} Unknown Urls Ready to open. Click me !`;
 
                 console.log(errorLog);
             }
