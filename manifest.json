@@ -4,7 +4,7 @@
 	"version": "1.0",
 	"description": "Facebook Events Manager is part of the www.hikcal.com Project it aims to regroup all hikings pages of facebook into one",
 	"icons": {
-		"48":"icon.png"
+		"48":"./Public/icon.png"
 	},
 	"permissions": [
 		"storage",
@@ -15,7 +15,7 @@
 	"content_scripts": [
 		{
 			"matches": ["https://m.facebook.com/"],
-			"js": ["style.js", "scrapper.js"]
+			"js": ["./Front/Style.js","./Back/Utils.js", "./Back/Scrapper.js", "./Back/Main.js"]
 		}
 	]
 }

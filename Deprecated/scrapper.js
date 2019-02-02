@@ -1,4 +1,4 @@
-const _ConfigTimer = 30;
+const _ConfigTimer = 300;
 const _PrintErrorLog = true;
 const _HandleSkip = "SKIP";
 const _IncludeMoreEvents = true;

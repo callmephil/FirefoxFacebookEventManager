@@ -19,17 +19,19 @@ The project is part of the www.hikcal.com project.
 
 ## Progression
 ### Priority High V.1.0
-* [ ] Solve the `T` mystery `!!!`
-* [ ] Re-Work HTML parsing process + (Understand why some  are skipped)
+* [ ] Main.js Code Cleanup
+* [ ] Analyse and solve v1ErrorLog_3.json
+* [ ] Re-Work HTML parsing process + (Understand why some are skipped)
 * [ ] Solve bugs listed in ErrorsLog
 * [ ] Import URL LIST from external File | Estimated 3 hours
 
 #### Priority Medium
+* [ ] Solve the `T` mystery `!!!`
 * [ ] U.I For Extension
 * [ ] Add Filtering Options
 
 #### Priority Low
-* [ ] Implement Shortcut [Interrested, UnInterrested]
+* [ ] Implement Shortcut [Interrested, Uninterrested]
 * [ ] Implement Cache System (For non interesting events) | `Note: Urls changes store title text instead`
 
 ### Completed Task // V.0.5 | Deprecated
@@ -61,24 +63,36 @@ The project is part of the www.hikcal.com project.
 * [x] Remove Tabs limit Restriction
 * [x] Implement Small Config + Removed Magic numbers
     > Interval | Logs | SubUrls
+* [x] Implement Check for non-group event.
+* [x] Implement Counter for page(s)/group(s) without events
+* [x] Added Button for ErrorLogs 
+    > (It's now possible to open the original url if something is wrong with it) 
+* [x] Re-structured Files in folder.
 
 > Real Time Spent 1 Day
 
 ### Test Result :
-#### // V.0.5
+#### // V.0.5 (Feb 1 - 2019)
 - URL Count : 1071
 - URL Result Count : 87 => `Crash`
 - Time : 7 minutes
 - Interval : 300 ms
 - ErrorLog : No
-#### // V.1.0
+#### // V.1.0 (Feb 1 - 2019)
 - URL Count : 1071
 - URL Result Count : 3571 => `Success`
 - Time : 30 Minutes
 - Interval : 300 ms
 - ErrorLog : Yes | `149`
 > Note : Re-running the test gives different result
-
+#### // V.1.1 (Feb 2 - 2019)
+- URL Count : 1071
+- URL Result Count : 3550 => `Success`
+- Time : 39 Minutes
+- Interval : 300 ms
+- ErrorLog : Yes | `120` | v1ErrorLog_3.json
+- Pages without active events : 424
+> Note : Re-running the test gives different result
 
 #### Rescoping the project
 - Sat 26 6:00 P.M 
