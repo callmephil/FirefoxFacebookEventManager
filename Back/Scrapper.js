@@ -11,24 +11,21 @@ const parseFacebookEventsPage = async (html, url) => {
     try {
         const frag = document.createElement("div")
         frag.innerHTML = html;
-        let newList = [];
+        const urls = [];
         [...frag.querySelectorAll('table td > div')].forEach(
             container => {
-                const elements = [...container.querySelectorAll('div > span')];
-
-                // ! Todo Split this so we can extra checks later
-                const isNotYetInterrested = [...elements[4].querySelectorAll('a')].find(
-                    event => event.innerHTML.includes("Interested") // Can Add Extra Checks here
-                )
-
-                if (isNotYetInterrested) {
-                    const urls = [...elements[4].querySelectorAll('a')];
-                    newList.push(urls[0].href);
-                }
+                const elements = [...container.querySelectorAll('a')];
+                let url = "";
+                elements.map(el => {
+                    if (el.innerHTML.includes("View Event Details"))
+                        url = el.href;
+                    if (el.innerHTML.includes("Interested"))
+                        urls.push(url);
+                });
             }
         )
-        if (newList)
-            return newList;
+        if (urls)
+            return urls;
     } catch (e) {
         const frag = document.createElement("div")
         frag.innerHTML = html;

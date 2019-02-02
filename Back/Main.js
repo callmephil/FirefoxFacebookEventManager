@@ -31,7 +31,7 @@ const main = async (urls) => {
                 });
             }
             btn.onclick = openEventPages;
-            btn.innerHTML = `${urlsList.length} Urls Ready to open. Click me !`;
+            btn.innerHTML = `${urlsList.length} Event Urls Ready to open. Click me !`;
             btn.style = "border:5px solid green; width:100%; height:50vh; font-Size: 32px; color:green; background-color:white;";
 
             // !@Todo handle more exceptions in selector
