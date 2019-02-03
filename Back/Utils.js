@@ -7,9 +7,5 @@ const openUrlsInNewTab = (url) => {
     }
 }
 
-const sleep = () => {
-    return function (x) {
-        return new Promise(resolve => setTimeout(() => resolve(x), _ConfigTimer));
-    }
-}
+const sleep = () => (x) => new Promise(resolve => setTimeout(() => resolve(x), _ConfigTimer));
 //#endregion
