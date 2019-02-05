@@ -19,7 +19,6 @@ The project is part of the www.hikcal.com project.
 
 ## Progression
 ### Priority High V.1.0.5
-* [ ] Solve the `T` mystery `!!!`
 
 #### Priority Medium
 * [ ] U.I For Extension
@@ -69,9 +68,8 @@ The project is part of the www.hikcal.com project.
 * [x] Analyse and solve v1ErrorLog_3.json
 * [x] Re-Work HTML parsing process + (Understand why some are skipped)
 * [x] Solve bugs listed in ErrorsLog_3
-
-> Real Time Spent 1 Day
-
+* [X] Solve the `T` mystery `!!!`
+    > `T` Mystery seems to be related to facebook accounts, and not a code related issue.
 
 #### Rescoping the project
 - Sat 26 6:00 P.M 
