@@ -7,15 +7,27 @@
 		"48":"./Public/icon.png"
 	},
 	"permissions": [
-		"storage",
-		"*://localhost/*",
-		"*://m.facebook.com/*"
+		"storage", 
+		"bookmarks",
+		"*://developer.mozilla.org/*",
+		"webRequest",
+		"browserSettings",
+		"browsingData"
 
 	],
 	"content_scripts": [
 		{
-			"matches": ["https://m.facebook.com/"],
-			"js": ["./Front/Style.js","./Back/Utils.js", "./Back/Scrapper.js", "./Back/Main.js"]
+			"matches": ["https://m.facebook.com/", "https://m.facebook.com/events/*"],
+			"js": ["./Front/Style.js","./Settings/Urls.js","./Back/Utils.js", "./Back/Scrapper.js", "./Back/Main.js", "./Back/Storage.js"]
 		}
-	]
+	],
+	"options_ui": {
+		"page": "./settings/options.html"
+	},
+
+	"applications": {
+		"gecko": {
+			"id": "addon@example.com"
+		}
+	}
 }

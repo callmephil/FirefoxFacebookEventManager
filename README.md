@@ -19,17 +19,14 @@ The project is part of the www.hikcal.com project.
 
 ## Progression
 ### Priority High V.1.0.5
+* [ ] Code Cleanup (Main.js, ParseEvent Method) // V.1.0.5
 
 #### Priority Medium
-* [ ] U.I For Extension
-* [ ] Import URL LIST from external File
-* [ ] Add Filtering Options
-
 #### Priority Low
-* [ ] Code Cleanup (Main.js, ParseEvent Method) // V.1.0.5
-* [ ] Implement Shortcut [Interrested, Uninterrested]
-* [ ] Implement Cache System (For non interesting events) | `Note: Urls changes store title text instead`
 * [ ] Improve the front-end
+* [ ] Add Filtering Options
+* [ ] Import URL LIST from external File
+* [ ] U.I For Extension
 
 ### Completed Task // V.0.5 | Deprecated
 * [x] Research & Test ~ 21 hours
@@ -70,6 +67,10 @@ The project is part of the www.hikcal.com project.
 * [x] Solve bugs listed in ErrorsLog_3
 * [X] Solve the `T` mystery `!!!`
     > `T` Mystery seems to be related to facebook accounts, and not a code related issue.
+
+### Completed Task // V.1.5
+* [x] Implement Shortcut [`Interrested`, Uninterrested]
+* [x] Implement Cache System (For non interesting events) | `>> Storage.JS`
 
 #### Rescoping the project
 - Sat 26 6:00 P.M 

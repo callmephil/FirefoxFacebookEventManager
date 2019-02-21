@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="options.css">
+</head>
+const _ConfigTimer = 300;
+const _IncludeMoreEvents = true;
+const _PrintErrorLog = true;
+
+<body>
+    <h2>Configuration</h2>
+    <div class="container">
+        <form>
+            <div class="row">
+                <div class="col-25">
+                    <label for="fTimer">Timer in miliseconds (1000ms = 1s)</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fTimer" name="Timer" placeholder="300">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-75">
+                    <input type="checkbox" id="cbxMore" name="more" value>Include Subpages<br>
+                </div>
+                <div class="col-25">
+                    <label for="cbxMore">Search across the entire event page</label>
+                </div>
+                
+            </div>
+            
+             <div class="row">
+                <div class="col-75">
+                    <input type="checkbox" id="cbxLogs" name="logs" value>Include debug logs<br>
+                </div>
+                <div class="col-25">
+                    <label for="cbxLogs"></label>
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+    <h2>Add - Edit - Delete</h2>    
+    <div class="container">
+        <form>
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname">First Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="lname">Last Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="country">Country</label>
+                </div>
+                <div class="col-75">
+                    <select id="country" name="country">
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject">Subject</label>
+                </div>
+                <div class="col-75">
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    <h2>List</h2>
+    <script src="options.js"></script>
+</body>
+</html>
