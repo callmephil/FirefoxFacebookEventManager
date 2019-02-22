@@ -93,7 +93,9 @@ const main = async (urls) => {
             // !@Todo SPLIT/CLEANUP this
             promise.then(async () => {
                 const newList = [];
+                let count = 0;
                 await getLocalStorage().then(result => {
+                    count = result.length;
                     urlsList.forEach(eventpage => {
                         const evID = formatLink(eventpage);
                         const res = result.find(xID => xID === evID);
@@ -105,7 +107,8 @@ const main = async (urls) => {
                 }).then( () => {
                     btn.innerHTML = `${newList.length} Event Urls Ready to open. Click me !`;
                     btn.style = "border:5px solid green; width:100%; height:50vh; font-Size: 32px; color:green; background-color:white;";
-                    })
+                    btn_groups.innerHTML = `Skipped ${count} urls, Press 'u' in any event url to clear the list`;
+                })
 
                 const openEventPages = () => {
                     newList.forEach(element => {
@@ -178,7 +181,7 @@ const printErrorLog = () => {
         });
     }
     btn_groups.onclick = OpenGroupPages;
-    btn_groups.innerHTML = `${_Group_Pages_Url.length} Group Urls Ready to open. Click me !`;
+    //btn_groups.innerHTML = `${_Group_Pages_Url.length} Group Urls Ready to open. Click me !`;
 
     const OpenUnresolvedUrls = () => {
         _Unresolved_Url.forEach(element => {
