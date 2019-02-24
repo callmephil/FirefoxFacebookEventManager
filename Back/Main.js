@@ -60,7 +60,20 @@ const scrapper = async (url, results = []) =>
 const getUnwantedUrls = () => {
     console.log(StoredList);
 }
-      
+
+const ClickInterrested = () => {
+    var l = document.getElementById('event_button_bar');
+    if (l) {
+        const Interrested = [...l.querySelectorAll('a')][0];
+        if (Interrested) {
+            Interrested.click();
+            console.log(Interrested);
+        //    window.close();
+        }
+    } else
+        alert("Something Went wrong with `ClickInterrested` Please report to a developper");
+}
+
 const main = async (urls) => {
     try {
     const getTabUrl = window.location.href;
@@ -147,7 +160,7 @@ const main = async (urls) => {
                         clearStorage();
                     break;
                     case 'v':
-                        // Set Interrested And Close the Tab
+                        ClickInterrested();
                     break;
                     default: 
                         console.log(e.key);
@@ -160,7 +173,7 @@ const main = async (urls) => {
     else
         console.log("not at the good place");
     } catch (e){
-    console.log(e);
+        console.log(e);
     }
 }
 
