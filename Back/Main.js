@@ -1,9 +1,16 @@
 const _ConfigTimer = 1;
-const _IncludeMoreEvents = false;
+const _IncludeMoreEvents = true;
 const _HandleSkip = {};
 const _PrintErrorLog = true;
 const _ErrorLog = [];
 let _EmptyPageCount = 0;
+
+const KeyMap = {
+    HANDLE_UNWANTED:'z',
+    HANDLE_INTERRESTED:'v',
+    HANDLE_DELETESTORAGE:'u',
+    HANDLE_SHOWSTORAGE:'g'
+}
 
 const scrapper = async (url, results = []) =>
     fetch(url)
@@ -147,19 +154,19 @@ const main = async (urls) => {
             const logKey = (e) => {
                 switch (e.key)
                 {
-                    case 'g':
+                    case KeyMap.HANDLE_SHOWSTORAGE:
                     {
                         getLocalStorage().then(result => console.log(result));
                     }
                     break;
-                    case 'z':
+                    case KeyMap.HANDLE_UNWANTED:
                         setStorage(window.location.href);
                         window.close();
                     break;
-                    case 'u':
+                    case KeyMap.HANDLE_DELETESTORAGE:
                         clearStorage();
                     break;
-                    case 'v':
+                    case KeyMap.HANDLE_INTERRESTED:
                         ClickInterrested();
                     break;
                     default: 

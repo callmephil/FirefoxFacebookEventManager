@@ -17,13 +17,19 @@ The project is part of the www.hikcal.com project.
 
 [Tutorial in Video here](https://youtu.be/8YndtIYHMqU?t=212 "Tutorial in Video (Youtube)")
 
+## Settings
+For Now Settings are located in the file Back/Main.js at the beginning.
 
 ## Local Storage
 On a webpage containing `events` or `groups`
-Press 'z' for unwanted url
-Press 'v' for interrested
-Press 'u' for clearing the storage
-Press 'g' for showing the list in the inspector/console
+> You can change mapping in Back/Main.js `KeyMap`
+By default keys are :
+```
+    Press 'z' for unwanted url
+    Press 'v' for interrested
+    Press 'u' for clearing the storage
+    Press 'g' for showing the list in the inspector/console
+```
 
 ## Progression
 ### Priority High V.1.0.5
