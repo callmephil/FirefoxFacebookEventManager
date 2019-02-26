@@ -17,6 +17,14 @@ The project is part of the www.hikcal.com project.
 
 [Tutorial in Video here](https://youtu.be/8YndtIYHMqU?t=212 "Tutorial in Video (Youtube)")
 
+
+## Local Storage
+On a webpage containing `events` or `groups`
+Press 'z' for unwanted url
+Press 'v' for interrested
+Press 'u' for clearing the storage
+Press 'g' for showing the list in the inspector/console
+
 ## Progression
 ### Priority High V.1.0.5
 * [ ] Code Cleanup (Main.js, ParseEvent Method) // V.1.0.5
